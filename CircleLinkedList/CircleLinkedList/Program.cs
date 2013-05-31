@@ -18,7 +18,7 @@ namespace CircleLinkedList
             LinkedList list = InitList();
 
             LinkedNode node = FindLoopNode(list);
-
+            //comment
             Console.Read();
         }
 
