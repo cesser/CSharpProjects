@@ -10,6 +10,10 @@ namespace SortAndBinarySearch
     {
         static void Main(string[] args)
         {
+
+            BinaryTree tree = new BinaryTree() { Root = new TreeNode() { Data = 4} };
+            
+            Console.Read();
         }
     }
 }
