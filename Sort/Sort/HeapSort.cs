@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class Program
+    class HeapSort
     {
-        static void Main(string[] args)
-        {
-            MyArray array = new MyArray(10);
-        }
     }
 }
