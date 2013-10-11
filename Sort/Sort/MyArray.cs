@@ -10,11 +10,27 @@ namespace Sort
     {
         private int[] array;
 
+        public int this[int i]
+        {
+            get { return this.array[i]; }
+            set { this.array[i] = value; }
+        }
 
         public int ArraySize { get; private set; }
 
         public int UpperIndex { get; private set; }
 
+        public MyArray(int[] array) 
+        {
+            if (array == null)
+                throw new ArgumentNullException();
+
+            this.array = (int[])array.Clone();
+            this.ArraySize = this.array.Length;
+            this.UpperIndex = this.ArraySize - 1;
+        }
+        
+        
         public MyArray(int size)
         {
             if (size <= 0)
@@ -31,11 +47,17 @@ namespace Sort
             }
         }
 
+        public MyArray Clone()
+        {
+            MyArray newArray = new MyArray(this.array);
+            return newArray;
+        }
+
         public void DisplayArray()
         {
             for (int i = 0; i < this.ArraySize; i++)
             {
-                Console.Write(this.array[i].ToString(), @"\t");
+                Console.Write(this.array[i].ToString()+ "   ");
             }
             
         }
