@@ -10,7 +10,8 @@ namespace Sort
     {
         static void Main(string[] args)
         {
-            BubbleSort.BubbleTest();
+            //BubbleSort.BubbleTest();
+            SelectionSort.SelectionSortTest();
             Console.Read();
         }
     }

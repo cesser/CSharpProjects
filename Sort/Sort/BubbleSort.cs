@@ -44,13 +44,12 @@ namespace Sort
                     }
                     //Console.Write("     Inner loop:  " );
                     //array.DisplayArray();
-                    //Console.WriteLine();
+
                     counter++;
                 }
 
-                Console.Write("Outter loop:  ");
+                Console.Write("Outer loop:  ");
                 array.DisplayArray();
-                Console.WriteLine();
             }
 
             Console.WriteLine("Counter: " + counter.ToString());
@@ -79,13 +78,12 @@ namespace Sort
                     }
                     //Console.Write("     Inner loop:  ");
                     //array.DisplayArray();
-                    //Console.WriteLine();
+
                     counter++;
                 }
 
-                Console.Write("Outter loop:  ");
+                Console.Write("Outer loop:  ");
                 array.DisplayArray();
-                Console.WriteLine();
 
                 if (!hasSwap)
                     break;

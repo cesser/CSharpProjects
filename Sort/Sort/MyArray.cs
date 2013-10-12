@@ -59,7 +59,7 @@ namespace Sort
             {
                 Console.Write(this.array[i].ToString()+ "   ");
             }
-            
+            Console.WriteLine();
         }
     }
 }
