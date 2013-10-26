@@ -61,5 +61,14 @@ namespace Sort
             }
             Console.WriteLine();
         }
+        
+        public void DisplayArray(int startIndex, int endIndex)
+        {
+        	for (int i = startIndex; i <= (endIndex > this.UpperIndex ? this.UpperIndex : endIndex) ; i++)
+            {
+                Console.Write(this.array[i].ToString()+ "   ");
+            }
+            Console.WriteLine();
+        }
     }
 }

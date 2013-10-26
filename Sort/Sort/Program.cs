@@ -11,8 +11,9 @@ namespace Sort
         static void Main(string[] args)
         {
             //BubbleSort.BubbleTest();
-            SelectionSort.SelectionSortTest();
+            //SelectionSort.SelectionSortTest();
+            QuickSort.QuickSortTest();
             Console.Read();
-        }
+        } 
     }
 }

@@ -17,28 +17,12 @@ namespace CircleLinkedList
         {
             LinkedList list = InitList();
 
-            LinkedNode node = FindLoopNode(list);
+            LinkedNode node = list.FindLoopNode();
             //comment
             Console.Read();
         }
 
-        private static LinkedNode FindLoopNode(LinkedList list)
-        {
-            List<LinkedNode> checkedNodes = new List<LinkedNode>();
-
-            LinkedNode node = list.StartNode;
-            while (!checkedNodes.Contains(node))
-            {
-                checkedNodes.Add(node);
-                Console.WriteLine("check node:" + node.Data);
-                node = node.NextNode;
-            }
-
-            if(checkedNodes.Count > 1)
-                Console.WriteLine("loop node is:" + node.Data);
-
-            return node;
-        }
+      
 
         private static LinkedList InitList()
         {
@@ -52,35 +36,7 @@ namespace CircleLinkedList
             return list;
         }
 
-        p
     }
 
-    public class LinkedList
-    {
-        public LinkedNode StartNode { get; set; }
-
-        private LinkedNode CurrentNode { get; set; }
-
-        public LinkedList(LinkedNode startNode)
-        {
-            this.StartNode = startNode;
-            this.CurrentNode = startNode;
-        }
-
-        public void AddNode(LinkedNode node)
-        {
-            if (this.CurrentNode != null)
-            {
-                this.CurrentNode.NextNode = node;
-                this.CurrentNode = node;
-            }
-        }
-    }
-
-    public class LinkedNode
-    {
-        public string Data { get; set; }
-
-        public LinkedNode NextNode { get; set; }
-    }
+   
 }
