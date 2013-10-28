@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BFS.cs" />
+    <Compile Include="DFS.cs" />
     <Compile Include="Graph.cs" />
+    <Compile Include="MST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Vertex.cs" />
   </ItemGroup>
