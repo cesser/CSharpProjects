@@ -49,15 +49,16 @@ namespace InterviewPrograms
         private List<int> RemoveSpecificItem(List<int> selectionSet, int s)
         {
             List<int> newList = new List<int>();
+
+
             bool found = false;
             foreach (var item in selectionSet)
             {
-                if (item == s && !found)
+                if (!found && item == s)
                 {
                     found = true;
                     continue;
                 }
-
                 newList.Add(item);
             }
             return newList;
