@@ -32,8 +32,8 @@ namespace InterviewPrograms
 
             foreach (int s in nonDuplicationSet)
             {
-                result[i++] = s;
-                RecusivePermutation(result, i, RemoveSpecificItem(selectionSet, s), ref results);
+                result[i] = s;
+                RecusivePermutation(result, i + 1, RemoveSpecificItem(selectionSet, s), ref results);
             }
 
         }
@@ -49,10 +49,17 @@ namespace InterviewPrograms
         private List<int> RemoveSpecificItem(List<int> selectionSet, int s)
         {
             List<int> newList = new List<int>();
+
+
+            bool found = false;
             foreach (var item in selectionSet)
             {
-                if (item != s)
-                    newList.Add(item);
+                if (!found && item == s)
+                {
+                    found = true;
+                    continue;
+                }
+                newList.Add(item);
             }
             return newList;
         }

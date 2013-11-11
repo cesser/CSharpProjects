@@ -17,27 +17,55 @@ namespace UnitTestProject1
         [TestMethod]
         public void RecusivePermutation1()
         {
-            int[] array = { 1,2,2,3};
+            int[] array = { 1,2,3};
 
             List<List<int>> result = permutation.RecusiveSlove(array);
-            Assert.AreEqual(result.Count, 12);
-
-            foreach (var item in result)
-            {
-                PrintArray(item);
-            }
-
-            Console.Read();
+            Assert.AreEqual(6 ,result.Count );
         }
 
-
-        private void PrintArray(List<int> array)
+        [TestMethod]
+        public void RecusivePermutation2()
         {
-            foreach (var item in array)
-            {
-                Console.Write(item + "  ");
-            }
-            Console.WriteLine();
+            int[] array = { 1,2,2};
+
+            List<List<int>> result = permutation.RecusiveSlove(array);
+            Assert.AreEqual(3 ,result.Count );
+        }
+
+        [TestMethod]
+        public void RecusivePermutation3()
+        {
+            int[] array = { 1, 2, 2, 2 };
+
+            List<List<int>> result = permutation.RecusiveSlove(array);
+            Assert.AreEqual(4, result.Count);
+        }
+
+        [TestMethod]
+        public void RecusivePermutation4()
+        {
+            int[] array = { 1, 2, 2, 2 ,3};
+
+            List<List<int>> result = permutation.RecusiveSlove(array);
+            Assert.AreEqual(20, result.Count);
+        }
+
+        [TestMethod]
+        public void RecusivePermutation5()
+        {
+            int[] array = { 1, 2, 2, 3 };
+
+            List<List<int>> result = permutation.RecusiveSlove(array);
+            Assert.AreEqual(12, result.Count);
+        }
+
+        [TestMethod]
+        public void RecusivePermutation6()
+        {
+            int[] array = { 1, 2, 2, 3, 3 };
+
+            List<List<int>> result = permutation.RecusiveSlove(array);
+            Assert.AreEqual(30, result.Count);
         }
     }
 }
