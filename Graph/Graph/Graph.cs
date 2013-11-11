@@ -59,14 +59,14 @@ namespace Graph
             }
         }
 
-        public void AddEdge(int start, int end)
+        public void AddEdge(int start, int end, int weight = int.MaxValue)
         {
             if (start < this.MaxVertexNumber && end < this.MaxVertexNumber)
             {
                 Vertex vstart = this.VertexCollection[start];
                 Vertex vend = this.VertexCollection[end];
 
-                this.AddEdge(vstart, vend);
+                this.AddEdge(vstart, vend, weight);
             }
         }
 
