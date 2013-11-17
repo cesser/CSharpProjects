@@ -10,4 +10,16 @@ namespace TestData2
     {
         public string Name { get; set; }
     }
+    public class Class6
+    {
+        public string Name { get; set; }
+    }
+    public class Class7
+    {
+        public string Name { get; set; }
+    }
+    public class Class8
+    {
+        public string Name { get; set; }
+    }
 }

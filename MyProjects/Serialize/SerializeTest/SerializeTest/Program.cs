@@ -17,11 +17,17 @@ namespace SerializeTest
         {
             //NewSerializer();
 
+           // ObjectSerializer();
+            Console.Read();
+        }
+
+        private static void ObjectSerializer()
+        {
             Stopwatch swatch = Stopwatch.StartNew();
             XmlSerializer xs2 = new XmlSerializer(typeof(Class2));
             Class2 c2 = new Class2() { Name = "Class2", ClassInfo = new Class5() { Name = "Class5" } };
             StringBuilder sb = new StringBuilder();
-            using (StringWriter sw = new StringWriter(sb) )
+            using (StringWriter sw = new StringWriter(sb))
             {
                 xs2.Serialize(sw, c2);
             }
@@ -32,7 +38,6 @@ namespace SerializeTest
             }
             swatch.Stop();
             Console.WriteLine(swatch.Elapsed.TotalSeconds);
-            Console.Read();
         }
 
         private static void NewSerializer()
