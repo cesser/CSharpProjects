@@ -50,7 +50,6 @@ namespace InterviewPrograms
         {
             List<int> newList = new List<int>();
 
-
             bool found = false;
             foreach (var item in selectionSet)
             {
